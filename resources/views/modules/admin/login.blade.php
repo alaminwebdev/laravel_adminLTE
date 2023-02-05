@@ -1,14 +1,20 @@
 @extends('layouts.secondary')
-@include('partials.head')
+@section('title', 'Login')
 @section('content')
     <div class="col-sm-12 col-md-8 col-lg-6 col-xl-6 mx-auto">
+        @if (session()->has('success'))
+            <div class="alert alert-success alert-dismissible">
+                <i class="icon fas fa-check"></i>
+                {{ session('success') }}
+            </div>
+        @endif
         <div class="card card-success">
             <div class="card-header">
                 <h3 class="card-title">Login Form</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
-            <form action="{{ route('front.login.submit') }}" method="post" class="m-0">
+            <form action="{{ route('login.submit') }}" method="post" class="m-0">
                 @csrf
                 <div class="card-body">
                     @error('fail')
@@ -40,7 +46,7 @@
                     </div>
                     <div class="row">
                         <div class="offset-sm-2 col-sm-10">
-                            <a href="{{ route('front.forgot.password') }}" class="text-danger">Forget password ?</a>
+                            <a href="{{ route('forgot.password') }}" class="text-danger">Forget password ?</a>
                         </div>
                     </div>
                 </div>

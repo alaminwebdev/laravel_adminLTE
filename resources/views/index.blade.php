@@ -2,7 +2,7 @@
 
 @section('title', 'Dashboard')
 @php
-    $isActive = request()->routeIs('front.home*');
+    $isActive = request()->routeIs('home*');
     //dd($isActive);
 @endphp
 

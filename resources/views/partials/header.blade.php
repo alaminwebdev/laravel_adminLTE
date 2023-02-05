@@ -119,14 +119,14 @@
         <!-- Profile Dropdown Menu -->
         <li class="nav-item dropdown user-menu show">
             <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                <img src="{{ asset('dist/img/avatar5.png') }}" class="user-image img-circle elevation-2"
+                <img src="{{ asset('uploads/'.Auth::guard('admin')->user()->image) }}" class="user-image img-circle elevation-2"
                     alt="User Image">
                 <span class="d-none d-md-inline">{{ Auth::guard('admin')->user()->name }}</span>
             </a>
             <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-right" style="left: inherit; right: 0px;">
                 <!-- User image -->
                 <li class="user-header bg-success">
-                    <img src="{{ asset('dist/img/avatar5.png') }}" class="img-circle elevation-2" alt="User Image">
+                    <img src="{{ asset('uploads/'.Auth::guard('admin')->user()->image ) }}" class="img-circle elevation-2" alt="User Image">
                     <p>
                         {{ Auth::guard('admin')->user()->name }}
                         <small>Web Developer</small>
@@ -134,8 +134,8 @@
                 </li>
                 <!-- Menu Footer-->
                 <li class="user-footer">
-                    <a href="#" class="btn btn-secondary">Profile</a>
-                    <a href="{{ route('front.logout') }}" class="btn btn-danger float-right">Sign out</a>
+                    <a href="{{ route('profile') }}" class="btn btn-secondary">Profile</a>
+                    <a href="{{ route('logout') }}" class="btn btn-danger float-right">Sign out</a>
                 </li>
             </ul>
         </li>

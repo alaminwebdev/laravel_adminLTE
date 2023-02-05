@@ -4,7 +4,7 @@
     <div class="col-sm-12 col-md-8 col-lg-6 col-xl-6 mx-auto">
         <div class="card card-success">
             <div class="card-header">
-                <h3 class="card-title">Forget Password</h3>
+                <h3 class="card-title">Forgot Password</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
@@ -37,7 +37,7 @@
                 </div>
                 <!-- /.card-body -->
                 <div class="card-footer text-center">
-                    <a href="{{ route('front.login') }}" class="btn btn-info mr-3">Back</a>
+                    <a href="{{ route('login') }}" class="btn btn-info mr-3">Back</a>
                     <button type="submit" class="btn btn-success">Send Email</button>
                 </div>
                 <!-- /.card-footer -->
